@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Memory : MonoBehaviour
 {
     public GameObject memoryCube1, memoryCube2, memoryCube3, memoryCube4, debugMenu;
+    public Text instructions;
     public Transform pos1, pos2, pos3, pos4;
     private int numberSpawned = 0, order=0;
     public bool won = false, lost = false;
@@ -38,6 +40,7 @@ public class Memory : MonoBehaviour
                 case 3:
                     Instantiate(memoryCube4, pos1);
                     memoryCube4.GetComponent<MemoryItem>().SetOrderNum(1);
+                    instructions.text = "Click the blocks in the order they apeared";
                     break;
             }
             StartCoroutine("OneSec");

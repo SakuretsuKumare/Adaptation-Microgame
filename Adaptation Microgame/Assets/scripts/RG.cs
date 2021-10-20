@@ -36,7 +36,7 @@ public class RG : MonoBehaviour
         {
             description.text = "Press the button to the rhythm";
             timeToSpawn = false;
-            switch (numberSpawned)
+            switch (numberSpawned) //spawns rhythm game items in given order
             {
                 case 0:
                     Instantiate(inputDirection1, sLL);
@@ -55,11 +55,11 @@ public class RG : MonoBehaviour
             numberSpawned++;
             StartCoroutine("OneSecond");
         }
-        if (howManyDestroyed == 4)
+        if (howManyDestroyed == 4)//win detection
         {
             won = true;
         }
-        if (won)
+        if (won)//win method
         {
             debugMenu.gameObject.SetActive(true);
             RhythmUI.gameObject.SetActive(false);
@@ -67,7 +67,7 @@ public class RG : MonoBehaviour
             countDown = 3;
             howManyDestroyed = 0;
         }
-        if (lost)
+        if (lost)//lose function
         {
             debugMenu.gameObject.SetActive(true);
             RhythmUI.gameObject.SetActive(false);
