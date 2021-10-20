@@ -20,11 +20,11 @@ public class MemoryItem : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         if (mem.getReadyToPlay()) 
         { 
-            if (orderNum == mem.getOrder() + 1)//once again, not sure what is going on, but this is the only way I could make the game function.
+            if (orderNum == mem.getOrder())//once again, not sure what is going on, but this is the only way I could make the game function.
             {
                 Destroy(self);
                 mem.OneDestroyed();

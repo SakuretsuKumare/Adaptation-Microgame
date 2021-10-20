@@ -8,7 +8,7 @@ public class Memory : MonoBehaviour
     public GameObject memoryCube1, memoryCube2, memoryCube3, memoryCube4, debugMenu;
     public Text instructions;
     public Transform pos1, pos2, pos3, pos4;
-    private int numberSpawned = 0, order=0;
+    private int numberSpawned = 0, order=1;
     public bool won = false, lost = false;
     private bool readyToSpawn = true, readyToPlay=false;
     // Start is called before the first frame update
@@ -41,6 +41,7 @@ public class Memory : MonoBehaviour
                     Instantiate(memoryCube4, pos1);
                     memoryCube4.GetComponent<MemoryItem>().SetOrderNum(1);
                     instructions.text = "Click the blocks in the order they apeared";
+                    readyToPlay = true;
                     break;
             }
             StartCoroutine("OneSec");
@@ -52,6 +53,7 @@ public class Memory : MonoBehaviour
             debugMenu.gameObject.SetActive(true);
             GameObject.Find("Memory").gameObject.SetActive(false);
             won = false;
+            readyToPlay = false;
             numberSpawned = 0;
             order = 0;
         }
@@ -60,6 +62,7 @@ public class Memory : MonoBehaviour
             debugMenu.gameObject.SetActive(true);
             GameObject.Find("Memory").gameObject.SetActive(false);
             lost = false;
+            readyToPlay = false;
             numberSpawned = 0;
             order = 0;
         }
