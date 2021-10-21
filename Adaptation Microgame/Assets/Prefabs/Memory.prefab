@@ -130,8 +130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 209.72852}
-  m_SizeDelta: {x: 1073, y: 95.5429}
+  m_AnchoredPosition: {x: 0, y: 120.36}
+  m_SizeDelta: {x: 800, y: 95.5429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1075580330722139061
 CanvasRenderer:
@@ -278,16 +278,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a174e0ae331bbb45ba1f6d7ae8934da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoryCube1: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95,
-    type: 3}
-  memoryCube2: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95,
-    type: 3}
-  memoryCube3: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95,
-    type: 3}
-  memoryCube4: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95,
-    type: 3}
-  debugMenu: {fileID: 4482290175515757383, guid: 83e64ff8e2c9c584793f02951b3e06c0,
-    type: 3}
+  memoryCube1: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
+  memoryCube2: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
+  memoryCube3: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
+  memoryCube4: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
+  debugMenu: {fileID: 4482290175515757383, guid: 83e64ff8e2c9c584793f02951b3e06c0, type: 3}
+  instructions: {fileID: 0}
   pos1: {fileID: 1075580330529161441}
   pos2: {fileID: 1075580331483549265}
   pos3: {fileID: 1075580329875976596}
@@ -366,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

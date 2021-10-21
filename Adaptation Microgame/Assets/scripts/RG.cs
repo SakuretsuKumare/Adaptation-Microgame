@@ -7,7 +7,7 @@ public class RG : MonoBehaviour
 {
 
     public GameObject inputDirection1, inputDirection2, inputDirection3, inputdirection4, debugMenu, RhythmUI;
-    public int howManyDestroyed;
+    public int howManyDestroyed, time;
     public Transform sLR, sLU, sLL, sLD;
     public Collider inputWindow;
     public float speed;
@@ -15,7 +15,7 @@ public class RG : MonoBehaviour
     public Text description;
     private float countDown=3;
     private bool timeToSpawn=true, timeToCount=true;
-    public bool won=false,lost=false;
+    public bool won = false, lost = false, end = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,20 +60,20 @@ public class RG : MonoBehaviour
             won = true;
         }
         if (won)//win method
+        {// TODO ADD WIN GUI   
+        }
+        if (lost)//lose function
+        {//TODO ADD LOSS GUI
+        }
+        if (end)
         {
             debugMenu.gameObject.SetActive(true);
             RhythmUI.gameObject.SetActive(false);
             won = false;
-            countDown = 3;
-            howManyDestroyed = 0;
-        }
-        if (lost)//lose function
-        {
-            debugMenu.gameObject.SetActive(true);
-            RhythmUI.gameObject.SetActive(false);
             lost = false;
             countDown = 3;
             howManyDestroyed = 0;
+
         }
     }
     IEnumerator OneSecond()
@@ -89,6 +89,16 @@ public class RG : MonoBehaviour
         countDown--;
         timeToCount = true;
 
+
+    }
+    IEnumerator Timer()
+    {
+        while (time > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            time--;
+        }
+        end = true;
 
     }
     
