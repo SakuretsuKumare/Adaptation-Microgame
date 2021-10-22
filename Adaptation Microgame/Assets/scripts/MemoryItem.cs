@@ -7,11 +7,14 @@ public class MemoryItem : MonoBehaviour
     public int orderNum;
     private Memory mem;
     private GameObject scriptMule;
+    private GameObject loadManager;
     public GameObject self;
+
     // Start is called before the first frame update
     void Start()
     {
         scriptMule = GameObject.Find("ScriptMule");
+        loadManager = GameObject.Find("Load Manager");
         mem = scriptMule.GetComponent<Memory>();
     }
 
@@ -20,6 +23,7 @@ public class MemoryItem : MonoBehaviour
     {
         
     }
+
     public void OnMouseDown()
     {
         if (mem.getReadyToPlay()) 
@@ -30,16 +34,19 @@ public class MemoryItem : MonoBehaviour
                 mem.OneDestroyed();
                 if (orderNum == mem.getNumberSpawned())
                 {
-                    mem.won = true;
+                    //mem.won = true;
+                    loadManager.GetComponent<LoadManager>().Game3Win();
                 }
             }
             else
             {
-                mem.lost = true;
+                //mem.lost = true;
                 Debug.Log(orderNum);
+                loadManager.GetComponent<LoadManager>().GameOver();
             }
         }
     }
+
     public void SetOrderNum(int order)//to determine what order they need to be clicked in
     {
         orderNum = order;

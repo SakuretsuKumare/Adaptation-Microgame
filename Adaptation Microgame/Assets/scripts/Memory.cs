@@ -45,8 +45,6 @@ public class Memory : MonoBehaviour
                     break;
             }
             StartCoroutine("OneSec");
-
-
         }
         if (won)
         {
@@ -67,6 +65,7 @@ public class Memory : MonoBehaviour
             order = 0;
         }
     }
+
     IEnumerator OneSec()
     {
         yield return new WaitForSeconds(.5f);
@@ -74,18 +73,22 @@ public class Memory : MonoBehaviour
         numberSpawned++;
 
     }
+
     public int getOrder()
     {
         return order;
     }
+
     public int getNumberSpawned()
     {
         return numberSpawned;
     }
+
     public void OneDestroyed()
     {
         order++;
     }
+
     public bool getReadyToPlay()
     {
         return readyToPlay;

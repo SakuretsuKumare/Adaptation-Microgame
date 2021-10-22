@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class RG : MonoBehaviour
 {
-
     public GameObject inputDirection1, inputDirection2, inputDirection3, inputdirection4, debugMenu, RhythmUI;
+    private GameObject loadManager;
     public int howManyDestroyed, time;
     public Transform sLR, sLU, sLL, sLD;
     public Collider inputWindow;
@@ -16,10 +16,12 @@ public class RG : MonoBehaviour
     private float countDown=3;
     private bool timeToSpawn=true, timeToCount=true;
     public bool won = false, lost = false, end = false;
+
     // Start is called before the first frame update
     void Start()
     {
         howManyDestroyed = 0;
+        loadManager = GameObject.Find("Load Manager");
     }
 
     // Update is called once per frame
@@ -60,10 +62,12 @@ public class RG : MonoBehaviour
             won = true;
         }
         if (won)//win method
-        {// TODO ADD WIN GUI   
+        {
+            loadManager.GetComponent<LoadManager>().Game4Win();
         }
         if (lost)//lose function
-        {//TODO ADD LOSS GUI
+        {
+            loadManager.GetComponent<LoadManager>().GameOver();
         }
         if (end)
         {
@@ -73,15 +77,15 @@ public class RG : MonoBehaviour
             lost = false;
             countDown = 3;
             howManyDestroyed = 0;
-
         }
     }
+
     IEnumerator OneSecond()
     {
         yield return new WaitForSeconds(1f);
         timeToSpawn = true;
-
     }
+
     IEnumerator OneSecondII()
     {
         yield return new WaitForSeconds(1f);
@@ -91,6 +95,7 @@ public class RG : MonoBehaviour
 
 
     }
+
     IEnumerator Timer()
     {
         while (time > 0)
@@ -99,8 +104,5 @@ public class RG : MonoBehaviour
             time--;
         }
         end = true;
-
     }
-    
-    }
-
+}
