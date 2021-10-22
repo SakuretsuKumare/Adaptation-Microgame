@@ -60,6 +60,8 @@ public class LoadManager : MonoBehaviour
     public void Game5Win()
     {
         victoryScreen.SetActive(true);
+        Destroy(game5);
+
     }
     
     // Loads game 2.
@@ -92,4 +94,9 @@ public class LoadManager : MonoBehaviour
         gameOver = true;
         gameOverScreen.SetActive(true);
     }
+    public void Victory()
+    {
+        victoryScreen.SetActive(true);
+    }
+
 }

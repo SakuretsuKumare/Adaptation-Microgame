@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SneakyBoi : MonoBehaviour
 {
     public GameObject debugMenu, self;
+    private GameObject loadManager;
     public Text PC, NPC;
     public float speed;
     private bool safe = false, won = false, lost=false;    
@@ -13,6 +14,8 @@ public class SneakyBoi : MonoBehaviour
     void Start()
     {
         StartCoroutine("OctopusRotation");
+        loadManager = GameObject.Find("Load Manager");
+
     }
 
     // Update is called once per frame
@@ -29,20 +32,13 @@ public class SneakyBoi : MonoBehaviour
                 lost = true;
             }
         }
-        if (won)
+        if (won)//win method
         {
-            won = false;
-            StopCoroutine("OctopusRotation");
-            self.gameObject.SetActive(false);
-            debugMenu.gameObject.SetActive(true);
-
+            loadManager.GetComponent<LoadManager>().Game5Win();
         }
-        if (lost)
+        if (lost)//lose function
         {
-            lost = false;
-            StopCoroutine("OctopusRotation");
-            self.gameObject.SetActive(false);
-            debugMenu.gameObject.SetActive(true);
+            loadManager.GetComponent<LoadManager>().GameOver();
         }
     }
 
