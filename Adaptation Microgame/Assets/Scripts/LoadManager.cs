@@ -94,9 +94,10 @@ public class LoadManager : MonoBehaviour
         gameOver = true;
         gameOverScreen.SetActive(true);
     }
+
+    // Displays the You Win screen.
     public void Victory()
     {
         victoryScreen.SetActive(true);
     }
-
 }
