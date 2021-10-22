@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2988826226470094386}
   - component: {fileID: 2372680554323264798}
+  - component: {fileID: 5613614220037330029}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -82,6 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5613614220037330029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852578563639490512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf082bc68b33274e885551aa585dd7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 1852578563639490512}
 --- !u!1 &8054562835706935673
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +109,6 @@ GameObject:
   - component: {fileID: 339285607421594686}
   - component: {fileID: 8698478729983460693}
   - component: {fileID: 42269290152146021}
-  - component: {fileID: 1536034149007708893}
   m_Layer: 0
   m_Name: DirectionalInputCommandU
   m_TagString: Untagged
@@ -180,7 +193,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8054562835706935673}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -193,16 +206,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8054562835706935673}
   m_CullTransparentMesh: 0
---- !u!114 &1536034149007708893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8054562835706935673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf082bc68b33274e885551aa585dd7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  self: {fileID: 8054562835706935673}
