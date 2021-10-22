@@ -7,15 +7,16 @@ public class SneakyBoi : MonoBehaviour
 {
     public GameObject debugMenu, self;
     private GameObject loadManager;
-    public Text PC, NPC;
+    public Image octopus, shark;
+    public Sprite sharkLooking, sharkNotLooking;
     public float speed;
-    private bool safe = false, won = false, lost=false;    
+    private bool safe = false, won = false, lost = false;    
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("OctopusRotation");
         loadManager = GameObject.Find("Load Manager");
-
     }
 
     // Update is called once per frame
@@ -47,10 +48,10 @@ public class SneakyBoi : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(speed);
-            NPC.text = "Not watching";
+            shark.sprite = sharkNotLooking;
             safe = true;
             yield return new WaitForSeconds(speed);
-            NPC.text = "Watching";
+            shark.sprite = sharkLooking;
             safe = false;
         }
     }
