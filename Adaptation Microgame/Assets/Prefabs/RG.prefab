@@ -517,7 +517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &328402694810860931
 Transform:
   m_ObjectHideFlags: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   inputDirection2: {fileID: 8054562835706935673, guid: eadb484207bf96a4ba472e3238f49a2e, type: 3}
   inputDirection3: {fileID: 8054562835706935673, guid: eadb484207bf96a4ba472e3238f49a2e, type: 3}
   inputdirection4: {fileID: 8054562835706935673, guid: eadb484207bf96a4ba472e3238f49a2e, type: 3}
-  debugMenu: {fileID: 4482290175515757383, guid: 83e64ff8e2c9c584793f02951b3e06c0, type: 3}
+  debugMenu: {fileID: 0}
   RhythmUI: {fileID: 328402694810860930}
   howManyDestroyed: 0
   time: 0

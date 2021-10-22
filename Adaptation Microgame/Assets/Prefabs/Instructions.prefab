@@ -120,9 +120,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8871557146533477062}
-        m_TargetAssemblyTypeName: OctopusMatch1, Assembly-CSharp
-        m_MethodName: lose
+      - m_Target: {fileID: 1580784377219285939, guid: 60d92dc8218ca0e4787452f7f5354d6b, type: 3}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -331,9 +331,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8871557146533477062}
-        m_TargetAssemblyTypeName: OctopusMatch1, Assembly-CSharp
-        m_MethodName: lose
+      - m_Target: {fileID: 1580784377219285939, guid: 60d92dc8218ca0e4787452f7f5354d6b, type: 3}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8871557146533477062}
-        m_TargetAssemblyTypeName: OctopusMatch1, Assembly-CSharp
-        m_MethodName: lose
+      - m_Target: {fileID: 1580784377219285939, guid: 60d92dc8218ca0e4787452f7f5354d6b, type: 3}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2017525900019404125
 Transform:
   m_ObjectHideFlags: 0
@@ -750,9 +750,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8871557146533477062}
-        m_TargetAssemblyTypeName: OctopusMatch1, Assembly-CSharp
-        m_MethodName: win
+      - m_Target: {fileID: 1580784377219285939, guid: 60d92dc8218ca0e4787452f7f5354d6b, type: 3}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: Game2Win
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

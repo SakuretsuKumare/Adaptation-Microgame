@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1075580330472532297
 Transform:
   m_ObjectHideFlags: 0
@@ -282,8 +282,8 @@ MonoBehaviour:
   memoryCube2: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
   memoryCube3: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
   memoryCube4: {fileID: 8575836099223117272, guid: a557653c52c12454889c9e17b7683d95, type: 3}
-  debugMenu: {fileID: 4482290175515757383, guid: 83e64ff8e2c9c584793f02951b3e06c0, type: 3}
-  instructions: {fileID: 0}
+  debugMenu: {fileID: 0}
+  instructions: {fileID: 1075580330722139060}
   pos1: {fileID: 1075580330529161441}
   pos2: {fileID: 1075580331483549265}
   pos3: {fileID: 1075580329875976596}
